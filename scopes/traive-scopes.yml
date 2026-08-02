@@ -1,0 +1,89 @@
+generated: '2026-07-21'
+method: searched
+source: https://auth.traive-prod.com/realms/traive-prod/.well-known/openid-configuration
+docs: null
+note: >-
+  Traive publishes no public developer API or scopes reference. These scopes are
+  harvested verbatim from the scopes_supported claim of the public Keycloak OpenID
+  Connect discovery document for realm traive-prod. No scope descriptions are
+  published; "standard: true" marks OIDC/Keycloak built-in scopes, the remainder
+  name Traive's internal service estate.
+schemes:
+- name: traive-prod (Keycloak realm)
+  type: openIdConnect
+  issuer: https://auth.traive-prod.com/realms/traive-prod
+  source: well-known/traive-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://auth.traive-prod.com/realms/traive-prod/protocol/openid-connect/auth
+    tokenUrl: https://auth.traive-prod.com/realms/traive-prod/protocol/openid-connect/token
+  - flow: clientCredentials
+    tokenUrl: https://auth.traive-prod.com/realms/traive-prod/protocol/openid-connect/token
+  - flow: deviceCode
+    deviceAuthorizationUrl: https://auth.traive-prod.com/realms/traive-prod/protocol/openid-connect/auth/device
+  - flow: ciba
+    grant: urn:openid:params:grant-type:ciba
+scopes:
+- scope: openid
+  standard: true
+- scope: profile
+  standard: true
+- scope: email
+  standard: true
+- scope: address
+  standard: true
+- scope: phone
+  standard: true
+- scope: offline_access
+  standard: true
+- scope: roles
+  standard: true
+- scope: web-origins
+  standard: true
+- scope: acr
+  standard: true
+- scope: basic
+  standard: true
+- scope: service_account
+  standard: true
+- scope: organization
+  standard: true
+- scope: microprofile-jwt
+  standard: true
+- scope: one-traive-api
+- scope: platform-graphql
+- scope: erp-integration-api
+- scope: dis-integration-api
+- scope: dis-integrator-service
+- scope: inbound-dis-integrator-service
+- scope: outbound-dis-integrator-service
+- scope: credit-core-service
+- scope: credit-assessment-service
+- scope: credit-snapshot-service
+- scope: credit-atheneum-backend-service
+- scope: farmers-core-service
+- scope: retailers-core-service
+- scope: user-core-service
+- scope: entity-core-service
+- scope: document-core-service
+- scope: document-processor-service
+- scope: financial-information-api-service
+- scope: attributes-api-service
+- scope: settings-api-service
+- scope: return-data-credit-limit-erp
+- scope: return-data-documents-erp
+- scope: return-data-client-erp
+- scope: atheneum-document-status
+- scope: atheneum-supervisor
+- scope: permission-groups-kafka-connector
+- scope: keycloak-policy-enforcer
+- scope: keycloak-extensions-api
+- scope: enchila-schema-registry
+- scope: enchila-schema-registry-ui
+- scope: marketplace
+- scope: fiagro-app
+- scope: mp-user
+- scope: appsmith
+- scope: geoserver
+- scope: databricks
+- scope: streamlit-internal

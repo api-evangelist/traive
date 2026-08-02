@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: live HTTP probes of traive.com.br and auth.traive-prod.com (2026-07-21)
+hosts:
+- host: https://auth.traive-prod.com
+  note: Keycloak OpenID Connect provider (realm traive-prod) used for Traive platform login
+  documents:
+  - path: /realms/traive-prod/.well-known/openid-configuration
+    status: 200
+    file: traive-openid-configuration.json
+  - path: /realms/traive-prod/.well-known/oauth-authorization-server
+    status: 200
+    file: traive-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://traive.com.br
+  note: marketing site (traivefinance.com 301-redirects here)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+unresolved_hosts:
+- host: api.traive-prod.com
+  status: dns-nxdomain
+- host: api.traive.com.br
+  status: dns-nxdomain
+- host: docs.traive.com.br
+  status: dns-nxdomain
+- host: developers.traive.com.br
+  status: dns-nxdomain
+- host: developer.traive.com.br
+  status: dns-nxdomain
+- host: status.traive.com.br
+  status: dns-nxdomain
+- host: trust.traive.com.br
+  status: dns-nxdomain

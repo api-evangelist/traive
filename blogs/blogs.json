@@ -1,0 +1,21 @@
+{
+  "repo": "traive",
+  "feeds": [
+    {
+      "source": "https://traive.com.br/feed/",
+      "feed_url": "https://traive.com.br/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://traive.com.br/",
+      "feed_url": "https://traive.com.br/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 9,
+  "fetched": "2026-08-01T15:49:00Z"
+}

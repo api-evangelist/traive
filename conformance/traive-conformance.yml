@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://auth.traive-prod.com/realms/traive-prod/.well-known/openid-configuration
+note: Conformance evidence is limited to the platform's public Keycloak OpenID
+  Connect / OAuth 2.0 metadata; Traive publishes no public developer API and no
+  compliance/certification program page was found.
+standards:
+- id: oidc
+  conforms: true
+  evidence: live OpenID Connect discovery document at /realms/traive-prod/.well-known/openid-configuration
+    (well-known/traive-openid-configuration.json)
+- id: oauth2
+  conforms: true
+  evidence: authorization_code, client_credentials, refresh_token, device_code and
+    CIBA grants advertised by the Keycloak realm
+- id: rfc8414-oauth-authorization-server-metadata
+  conforms: true
+  evidence: live RFC 8414 metadata at /realms/traive-prod/.well-known/oauth-authorization-server
+    (well-known/traive-oauth-authorization-server.json)
+- id: rfc9126-pushed-authorization-requests
+  conforms: true
+  evidence: pushed_authorization_request_endpoint advertised in discovery metadata
+- id: rfc8705-mtls-bound-access-tokens
+  conforms: true
+  evidence: tls_client_certificate_bound_access_tokens=true in discovery metadata
+- id: rfc8628-device-authorization-grant
+  conforms: true
+  evidence: device_authorization_endpoint advertised in discovery metadata
+- id: openid-ciba
+  conforms: true
+  evidence: urn:openid:params:grant-type:ciba in grant_types_supported
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on traive.com.br and auth.traive-prod.com
+    (2026-07-21)

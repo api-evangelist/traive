@@ -1,0 +1,31 @@
+# Traive
+
+> Traive is a Brazilian agri-fintech that connects agribusiness with financial investors, using AI and data analytics to simplify credit access in the agricultural sector. Traive Agro handles agricultural credit commercialization (risk analysis, process automation, financing access); Traive Finance provides credit risk analysis and access to qualified agricultural assets. 160K+ registered producers; R$6B+ in structured recurring credit operations.
+
+Traive publishes no public developer API, SDKs, or developer documentation. Its platform authenticates through a Keycloak OpenID Connect provider (realm traive-prod) whose public discovery metadata names an internal service estate (credit, farmers, retailers, documents, ERP integration, GraphQL).
+
+## Company
+
+- [Website](https://traive.com.br/): Company site (traivefinance.com redirects here; Portuguese)
+- [Blog](https://traive.com.br/blog/): Company blog
+- [Cases](https://traive.com.br/cases/): Customer case studies
+- [Press](https://traive.com.br/imprensa/): Press coverage
+- [Careers](https://traive.com.br/carreiras/): Careers
+- [Contact](https://traive.com.br/contato/): Contact
+- [Terms of Service](https://traive.com.br/termos-e-condicoes-de-uso/): Terms and conditions
+- [Privacy Policy](https://traive.com.br/politica-de-privacidade/): Privacy policy
+- [GitHub](https://github.com/Traive-Finance): GitHub organization (hiring tech challenges only)
+
+## Authentication
+
+- [OpenID Connect discovery](https://auth.traive-prod.com/realms/traive-prod/.well-known/openid-configuration): Keycloak realm traive-prod (50 scopes, PAR, CIBA, device grant, mTLS-bound tokens)
+- [OAuth authorization server metadata](https://auth.traive-prod.com/realms/traive-prod/.well-known/oauth-authorization-server): RFC 8414 metadata
+- [Platform login](https://auth.traive-prod.com/realms/traive-prod/protocol/openid-connect/auth): Authorization endpoint
+
+## Profile artifacts
+
+- [APIs.json](https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/apis.yml): Machine-readable profile of Traive in the API Evangelist network
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/authentication/traive-authentication.yml): Harvested auth surface
+- [OAuth scopes](https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/scopes/traive-scopes.yml): 50 scopes harvested from discovery metadata
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/conformance/traive-conformance.yml): OIDC/OAuth standards conformance evidence
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/security/traive-domain-security.yml): TLS/DNS security posture probes
